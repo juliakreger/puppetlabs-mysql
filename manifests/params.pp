@@ -192,7 +192,28 @@ class mysql::params {
           $python_package_name = 'MySQL-python'
           $ruby_package_name   = 'ruby-mysql'
         }
-
+        'SmartOS': {
+          $client_package_name = 'mysql-client'
+          $server_package_name = 'mysql-server'
+          $basedir             = '/opt/local'
+          $config_file         = '/opt/local/my.cnf'
+          $datadir             = '/var/mysql'
+          $log_error           = '/var/log/mysql/error.log'
+          $pidfile             = '/var/mysql/mysql.pid'
+          $root_group          = 'root'
+          $server_service_name = 'mysql'
+          $socket              = '/tmp/mysql.sock'
+          $ssl_ca              = undef
+          $ssl_cert            = undef
+          $ssl_key             = undef
+          $tmpdir              = '/tmp'
+          # mysql::bindings
+          $java_package_name   = undef
+          $perl_package_name   = 'p5-DBD-mysql56'
+          $php_package_name    = 'php55-mysql'
+          $python_package_name = 'py27-mysqldb'
+          $ruby_package_name   = 'ruby200-mysql'
+        }
         default: {
           fail("Unsupported osfamily: ${::osfamily} operatingsystem: ${::operatingsystem}, module ${module_name} only support osfamily RedHat, Debian, and FreeBSD, or operatingsystem Amazon")
         }
