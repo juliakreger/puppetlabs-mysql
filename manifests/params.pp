@@ -196,7 +196,7 @@ class mysql::params {
           $client_package_name = 'mysql-client'
           $server_package_name = 'mysql-server'
           $basedir             = '/opt/local'
-          $config_file         = '/opt/local/my.cnf'
+          $config_file         = '/opt/local/etc/my.cnf'
           $datadir             = '/var/mysql'
           $log_error           = '/var/log/mysql/error.log'
           $pidfile             = '/var/mysql/mysql.pid'
